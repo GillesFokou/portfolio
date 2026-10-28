@@ -3,15 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gilles Adrien FOKOU TOUO — Carnet de Compétences | ESAIP ING4</title>
+    <title>Gilles Adrien FOKOU TOUO — Carnet de Compétences | ESAIP ING</title>
     <style>
         :root {
-            --bg-main: #f4efe6;
-            --paper-bg: #fffdf9;
-            --text-color: #2c2c2c;
             --primary: #1a365d;
             --accent: #b45309;
-            --border-color: #e5dec9;
+            --border-color: #d1c7b7;
             --tag-bg: #fef3c7;
             --tag-text: #92400e;
         }
@@ -19,24 +16,26 @@
         body {
             font-family: 'Georgia', serif;
             line-height: 1.8;
-            color: var(--text-color);
-            background-color: var(--bg-main);
+            color: #2c2c2c;
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.9), rgba(15, 23, 42, 0.95)), url('fond 1.avif') no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background-color: var(--paper-bg);
-            color: var(--text-color);
+            background: linear-gradient(rgba(255, 253, 249, 0.92), rgba(255, 253, 249, 0.92)), url('fond.webp');
+            background-size: cover;
+            color: #2c2c2c;
             padding: 40px 20px;
-            text-align: left; 
+            text-align: left;
             border-bottom: 3px solid var(--primary);
             max-width: 850px;
             margin: 40px auto 0 auto;
             border-top: 1px solid var(--border-color);
             border-left: 1px solid var(--border-color);
             border-right: 1px solid var(--border-color);
-            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             position: relative;
         }
 
@@ -72,11 +71,13 @@
         }
 
         .blog-post {
-            background: var(--paper-bg);
+            /* Utilisation de fond.webp en arrière-plan texturé pour les articles */
+            background: linear-gradient(rgba(255, 253, 249, 0.93), rgba(255, 253, 249, 0.93)), url('fond.webp');
+            background-size: cover;
             padding: 35px;
             margin-bottom: 35px;
             border: 1px solid var(--border-color);
-            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             position: relative;
         }
 
@@ -135,7 +136,7 @@
         }
 
         .project-card {
-            background: #faf6ee;
+            background: rgba(250, 246, 238, 0.95);
             border: 1px solid var(--border-color);
             padding: 15px;
             border-radius: 4px;
@@ -147,7 +148,7 @@
 
         .project-card:hover {
             transform: translateY(-3px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
             border-color: var(--accent);
         }
 
@@ -166,10 +167,11 @@
 
         .cv-box {
             text-align: center;
-            background: var(--paper-bg);
+            background: linear-gradient(rgba(255, 253, 249, 0.93), rgba(255, 253, 249, 0.93)), url('fond.webp');
+            background-size: cover;
             padding: 40px;
             border: 1px solid var(--border-color);
-            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             margin-bottom: 40px;
         }
 
@@ -202,10 +204,10 @@
         footer {
             text-align: center;
             padding: 30px;
-            color: #666;
+            color: #cbd5e1;
             font-size: 0.85em;
             font-family: 'Courier New', monospace;
-            border-top: 1px solid var(--border-color);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
             margin-top: 60px;
         }
     </style>
@@ -283,7 +285,7 @@
         <div class="projects-grid">
             <a href="https://github.com/GillesFokou/MazeSolver" class="project-card" target="_blank">
                 <h4>MazeSolver</h4>
-                <p>Solveur d'algorithme de labyrinthe en C++ (Mobilité Erasmus VSB-TUO)].</p>
+                <p>Solveur d'algorithme de labyrinthe en C++ (Mobilité Erasmus VSB-TUO).</p>
             </a>
             <a href="https://github.com/GillesFokou/desktop-tutorial" class="project-card" target="_blank">
                 <h4>desktop-tutorial</h4>
@@ -296,11 +298,6 @@
             <a href="https://github.com/GillesFokou/Cycle-de-vie" class="project-card" target="_blank">
                 <h4>Cycle-de-vie</h4>
                 <p>Projet axé sur la gestion du cycle de vie des composants système.</p>
-            </a>
-            <a href="https://github.com/GillesFokou/portfolio" class="project-card" target="_blank">
-                <h4>portfolio</h4>
-                <p>Code source de ce carnet de compétences hébergé via GitHub.</p>
-            </a>
         </div>
     </article>
 
@@ -326,14 +323,14 @@
             <a href="certificate MATLAB.pdf" class="cv-btn" target="_blank"> Certificat MATLAB</a>
             <a href="certificate Machine Learning.pdf" class="cv-btn" target="_blank">Certificat Machine Learning</a>
             <a href="Attestation_de_secouriste.pdf" class="cv-btn" target="_blank"> Attestation Secouriste</a>
-            <a href="attestation Safe.png" class="cv-btn" target="_blank"> Attestation Benevolat</a>
+            <a href="Attestation Safe.png" class="cv-btn" target="_blank"> Attestation de bénévolat</a>
         </div>
     </div>
 
 </div>
 
 <footer>
-    <p>&copy; 2026 Gilles Adrien FOKOU TOUO — Carnet de Compétences | ESAIP ING4 </p>
+    <p>&copy; 2026 Gilles Adrien FOKOU TOUO — Carnet de Compétences | ESAIP ING</p>
 </footer>
 
 </body>
