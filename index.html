@@ -1,194 +1,270 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gilles Adrien FOKOU TOUO - Carnet de Bord</title>
+
+    <title>Gilles Adrien FOKOU TOUO | Portfolio</title>
+
     <style>
-        :root {
-            --primary: #0f172a;
-            --accent: #2563eb;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-color: #334155;
+        * {
+            box-sizing: border-box;
         }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.7;
-            color: var(--text-color);
-            background-color: var(--bg-color);
             margin: 0;
-            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #222;
+            background: #fff;
         }
+
+        header, main, footer {
+            max-width: 820px;
+            margin: auto;
+            padding: 24px 20px;
+        }
+
         header {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding-top: 50px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #ddd;
         }
-        header h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.2em;
-            letter-spacing: -0.5px;
+
+        h1 {
+            margin: 0;
+            font-size: 29px;
+            font-weight: 600;
+            line-height: 1.4;
         }
+
         header p {
             margin: 5px 0;
-            font-size: 1.1em;
-            opacity: 0.9;
+            color: #555;
         }
-        .container {
-            max-width: 850px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .blog-post {
-            background: var(--card-bg);
-            padding: 30px;
-            margin-bottom: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            border-top: 4px solid var(--accent);
-        }
-        .blog-post h2 {
-            color: var(--primary);
-            margin-top: 0;
-            font-size: 1.5em;
-            border-bottom: 2px solid #f1f5f9;
-            padding-bottom: 12px;
-        }
-        .blog-post h3 {
-            color: var(--accent);
-            font-size: 1.1em;
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
             margin-top: 20px;
         }
-        .meta-tag {
-            display: inline-block;
-            background: #eff6ff;
-            color: var(--accent);
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            font-weight: 600;
-            margin-bottom: 15px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .cv-box {
-            text-align: center;
-            background: var(--card-bg);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            margin-bottom: 40px;
-        }
-        .cv-btn {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 12px 25px;
+
+        a {
+            color: #0759b5;
             text-decoration: none;
-            border-radius: 6px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding-top: 10px;
+        }
+
+        section {
+            padding: 27px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .category {
+            margin-bottom: 6px;
+            color: #666;
+            font-size: 12px;
             font-weight: bold;
-            transition: background 0.2s;
-            margin-top: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
         }
-        .cv-btn:hover {
-            background: #1d4ed8;
+
+        h2 {
+            margin: 0 0 12px;
+            font-size: 22px;
+            font-weight: 600;
         }
+
+        h3 {
+            margin: 20px 0 5px;
+            font-size: 17px;
+        }
+
+        p {
+            margin: 0 0 12px;
+        }
+
+        ul {
+            padding-left: 22px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .cv {
+            padding: 30px 0;
+        }
+
+        .cv a {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 7px 12px;
+            border: 1px solid #0759b5;
+            border-radius: 3px;
+        }
+
         footer {
-            text-align: center;
-            padding: 20px;
-            color: #64748b;
-            font-size: 0.9em;
-            border-top: 1px solid #e2e8f0;
-            margin-top: 60px;
+            padding-top: 15px;
+            padding-bottom: 25px;
+            color: #666;
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            header, main, footer {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            nav {
+                gap: 12px;
+            }
         }
     </style>
 </head>
+
 <body>
 
 <header>
     <h1>Gilles Adrien FOKOU TOUO</h1>
-    <p>Élève-ingénieur Informatique et Réseaux (ING4) — Spécialisation Cybersécurité</p>
-    <p><em>Mon Carnet de Compétences &amp; Récit de Parcours</em></p>
+
+    <p>Élève-ingénieur en informatique et réseaux — ING4</p>
+    <p>Cybersécurité, développement et réseaux</p>
+
+    <nav>
+        <a href="#apropos">À propos</a>
+        <a href="#competences">Centres d'intérêt</a>
+        <a href="#projets">Projets</a>
+        <a href="#experiences">Expériences</a>
+        <a href="#cv">Mon CV</a>
+    </nav>
 </header>
 
-<div class="container">
+<main>
 
-    <! Article 1 : Qui je suis>
-    <article class="blog-post">
-        <span class="meta-tag">Introduction &amp; Vocation</span>
-        <h2>Qui je suis ? — Le déclic de la cybersécurité</h2>
-        <p>Mon parcours en informatique trouve ses racines dès le lycée, où j'occupais le poste de vice-responsable du club informatique. Avec mon équipe, nous avions mis sur pied un serveur administré sous Linux. L'objectif était de permettre aux élèves de se connecter en local pour accéder à des cours mal compris en classe et à des exercices corrigés laissés par des enseignants.</p>
-        <p>Un jour, nous avons subi une cyberattaque : notre serveur a été piraté et une partie du système a été détruite. Cette confrontation directe avec la vulnérabilité des systèmes a été un véritable déclic. Plutôt que de me décourager, cet incident a transformé ma curiosité pour l'informatique en une véritable vocation pour la protection des données.</p>
-        <p>Aujourd'hui en 4e année à l'ESAIP, je poursuis cette ambition avec la ferme volonté de concevoir des infrastructures plus sûres, résilientes et adaptées aux menaces d'aujourd'hui.</p>
-    </article>
+    <section id="apropos">
+        <p class="category">Présentation</p>
+        <h2>À propos de moi</h2>
 
-    <!Article 2 : Projet PSIR>
-    <article class="blog-post">
-        <span class="meta-tag">Projet R&amp;D / Cybersécurité</span>
-        <h2>Projet PSIR : Sécurité des communications radio</h2>
-        <p><strong>Contexte &amp; Enjeux :</strong> Analyse des vulnérabilités des réseaux de communication sans fil face aux attaques intentionnelles de brouillage (<em>jamming</em>) sur la couche physique.</p>
-        <h3>Apports et compétences mobilisées :</h3>
-        <ul>
-            <li><strong>Posture R&amp;D :</strong> Capacité à investiguer des problématiques complexes de signal et à modéliser des contre-mesures techniques (sauts de fréquence, robustesse des protocoles).</li>
-            <li><strong>Vision systémique :</strong> Compréhension concrète des vecteurs d'attaque par déni de service (DoS) pour mieux anticiper la sécurisation des infrastructures critiques.</li>
-        </ul>
-    </article>
+        <p>
+            Je suis étudiant en quatrième année à l'ESAIP,
+            en informatique et réseaux, avec un intérêt particulier
+            pour la cybersécurité.
+        </p>
 
-    <!Article 3 : Projets de Dev >
-    <article class="blog-post">
-        <span class="meta-tag">Projets Académiques</span>
-        <h2>Ingénierie Logicielle : De l'Erasmus au développement Java</h2>
-        <p><strong>Contexte &amp; Enjeux :</strong> Conception d'applications orientées objet et de solveurs algorithmiques (comme le projet de labyrinthe réalisé lors de mon semestre Erasmus à la VSB-TUO en République Tchèque, et le jeu de bataille navale à l'ESAIP).</p>
-        <h3>Apports et compétences mobilisées :</h3>
-        <ul>
-            <li><strong>Rigueur de conception :</strong> Maîtrise des principes de la programmation orientée objet, structuration modulaire du code et gestion de version (Git).</li>
-            <li><strong>Adaptabilité internationale :</strong> Collaboration dans des environnements multiculturels et autonomie technique développée en mobilité académique.</li>
-        </ul>
-    </article>
+        <p>
+            Ma curiosité pour ce domaine est née d'une expérience
+            concrète autour d'un serveur Linux au lycée. Depuis,
+            je m'intéresse à la manière dont les systèmes
+            fonctionnent, aux vulnérabilités qu'ils peuvent
+            présenter et aux moyens de mieux les sécuriser.
+        </p>
 
-    <!Article 4 : Expériences pro>
-    <article class="blog-post">
-        <span class="meta-tag">Expériences Professionnelles</span>
-        <h2>Immersion en entreprise : Rigueur et Opérationnel</h2>
-        <p><strong>Contexte &amp; Enjeux :</strong> Expériences concrètes en milieu professionnel (opérateur câbleur chez ADAPEI et employé polyvalent à Terra Botanica).</p>
-        <h3>Apports et compétences mobilisées :</h3>
-        <ul>
-            <li><strong>Conformité et Sécurité :</strong> Respect strict des consignes de sécurité, des normes techniques et des procédures opérationnelles en environnement exigeant.</li>
-            <li><strong>Soft Skills :</strong> Sens aigu de l'organisation, réactivité face aux imprévus et intégration rapide au sein d'équipes pluridisciplinaires.</li>
-        </ul>
-    </article>
+        <p>
+            Ce site présente quelques projets et expériences
+            qui marquent mon parcours.
+        </p>
+    </section>
 
-   <!Article 5 : Engagements>
-    <article class="blog-post">
-        <span class="meta-tag">Engagement Citoyen (LEP)</span>
-        <h2>Vie associative &amp; Pédagogie</h2>
-        <p><strong>Activités :</strong> Implication active au sein des associations de l'ESAIP (SAFE, Bureau des Arts - BDA) et engagement solidaire et pédagogique (animateur pour le camp Mayanette au Cameroun).</p>
-        <h3>Compétences développées :</h3>
-        <ul>
-            <li><strong>Leadership et gestion de projet :</strong> Esprit d'initiative, sens des responsabilités et coordination d'événements au sein de la vie étudiante.</li>
-            <li><strong>Transmission et partage :</strong> Encadrement pédagogique, écoute active et engagement fort au service de la collectivité et du vivre-ensemble.</li>
-        </ul>
-    </article>
+    <section id="competences">
+        <p class="category">Domaines techniques</p>
+        <h2>Ce qui m'intéresse</h2>
 
-    <!Section CV Blog>
-    <div class="cv-box">
-        <h2>Mon Profil Professionnel</h2>
-        <p>Envie d'en savoir plus sur mon parcours académique et mes compétences techniques ? Téléchargez mon CV mis à jour.</p>
-        <!-- Assurez-vous que le nom du fichier ci-dessous correspond exactement au nom de votre PDF sur GitHub -->
-        <a href="CV PRO GILLES.pdf" class="cv-btn" target="_blank">Télécharger mon CV (PDF)</a>
-    </div>
+        <p>
+            Je m'intéresse à la sécurité des systèmes et des réseaux,
+            au développement logiciel et aux outils qui permettent
+            de concevoir, tester et analyser des solutions techniques.
+        </p>
 
-</div>
+        <p>
+            Au fil de ma formation, je travaille notamment avec
+            Linux, Git, Docker, Java, MATLAB et des outils de
+            simulation réseau. Je découvre également les applications
+            du Machine Learning à l'analyse de données et à la
+            cybersécurité.
+        </p>
+    </section>
+
+    <section id="projets">
+        <p class="category">Quelques réalisations</p>
+        <h2>Projets académiques</h2>
+
+        <h3>PSIR — Communications radio</h3>
+        <p>
+            Un projet autour de la sécurité des communications
+            sans fil et de l'étude du brouillage intentionnel.
+        </p>
+
+        <h3>Développement Java</h3>
+        <p>
+            Des projets de programmation réalisés pendant ma
+            formation, notamment un solveur de labyrinthe et
+            un jeu de bataille navale.
+        </p>
+
+        <h3>Réseaux et systèmes</h3>
+        <p>
+            Des travaux pratiques et des explorations techniques
+            autour des infrastructures informatiques, des systèmes
+            et de leur sécurisation.
+        </p>
+    </section>
+
+    <section id="experiences">
+        <p class="category">Parcours</p>
+        <h2>Expériences et engagements</h2>
+
+        <p>
+            Mon parcours comprend des expériences professionnelles,
+            un semestre Erasmus en République tchèque et des
+            engagements associatifs et bénévoles.
+        </p>
+
+        <p>
+            Ces différentes expériences m'ont permis de découvrir
+            d'autres environnements de travail, de gagner en
+            autonomie et de développer mon sens du collectif.
+        </p>
+    </section>
+
+    <section class="cv" id="cv">
+        <p class="category">Pour aller plus loin</p>
+        <h2>Mon CV</h2>
+
+        <p>
+            Pour en savoir plus sur mon parcours, consultez mon CV.
+        </p>
+
+        <a href="CV PRO GILLES.pdf"
+           target="_blank"
+           rel="noopener">
+            Consulter mon CV (PDF)
+        </a>
+    </section>
+
+</main>
 
 <footer>
-    <p>&copy; 2026 Gilles Adrien FOKOU TOUO — Carnet de Compétences</p>
+    <p>Gilles Adrien FOKOU TOUO — Portfolio personnel — 2026</p>
 </footer>
 
 </body>
