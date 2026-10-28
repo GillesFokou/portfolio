@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -68,6 +67,7 @@
         section {
             padding: 27px 0;
             border-bottom: 1px solid #ddd;
+            scroll-margin-top: 15px;
         }
 
         .category {
@@ -100,6 +100,11 @@
 
         li {
             margin-bottom: 6px;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-bottom: 8px;
         }
 
         .cv {
@@ -153,7 +158,8 @@
     <nav>
         <a href="#apropos">À propos</a>
         <a href="#competences">Centres d'intérêt</a>
-        <a href="#projets">Projets</a>
+        <a href="#projets">Projets académiques</a>
+        <a href="#projets-personnels">Projets personnels</a>
         <a href="#experiences">Expériences</a>
         <a href="#cv">Mon CV</a>
     </nav>
@@ -173,10 +179,9 @@
 
         <p>
             Ma curiosité pour ce domaine est née d'une expérience
-            concrète autour d'un serveur Linux au lycée. Depuis,
-            je m'intéresse à la manière dont les systèmes
-            fonctionnent, aux vulnérabilités qu'ils peuvent
-            présenter et aux moyens de mieux les sécuriser.
+            autour d'un serveur Linux au lycée. Depuis, je m'intéresse
+            au fonctionnement des systèmes, à leurs vulnérabilités
+            et aux moyens de mieux les sécuriser.
         </p>
 
         <p>
@@ -191,41 +196,90 @@
 
         <p>
             Je m'intéresse à la sécurité des systèmes et des réseaux,
-            au développement logiciel et aux outils qui permettent
-            de concevoir, tester et analyser des solutions techniques.
+            au développement logiciel et aux outils permettant
+            de concevoir et de tester des solutions techniques.
         </p>
 
         <p>
             Au fil de ma formation, je travaille notamment avec
             Linux, Git, Docker, Java, MATLAB et des outils de
-            simulation réseau. Je découvre également les applications
-            du Machine Learning à l'analyse de données et à la
-            cybersécurité.
+            simulation réseau. Je m'intéresse également aux
+            applications du Machine Learning en cybersécurité.
         </p>
     </section>
 
     <section id="projets">
-        <p class="category">Quelques réalisations</p>
+        <p class="category">Formation</p>
         <h2>Projets académiques</h2>
 
         <h3>PSIR — Communications radio</h3>
         <p>
-            Un projet autour de la sécurité des communications
-            sans fil et de l'étude du brouillage intentionnel.
+            Étude de la sécurité des communications sans fil
+            et des effets du brouillage intentionnel.
         </p>
 
         <h3>Développement Java</h3>
         <p>
-            Des projets de programmation réalisés pendant ma
-            formation, notamment un solveur de labyrinthe et
-            un jeu de bataille navale.
+            Réalisation de projets de programmation, notamment
+            un solveur de labyrinthe pendant mon semestre Erasmus
+            à la VSB-TUO et un jeu de bataille navale à l'ESAIP.
+        </p>
+    </section>
+
+    <section id="projets-personnels">
+        <p class="category">GitHub</p>
+        <h2>Mes projets personnels</h2>
+
+        <p>
+            Je développe des projets pour mettre en pratique
+            mes connaissances en informatique, en développement
+            et en réseaux.
         </p>
 
-        <h3>Réseaux et systèmes</h3>
+        <h3>Docker Labs</h3>
         <p>
-            Des travaux pratiques et des explorations techniques
-            autour des infrastructures informatiques, des systèmes
-            et de leur sécurisation.
+            Exercices pratiques autour des conteneurs,
+            des réseaux Docker et de Docker Compose.
+        </p>
+        <p>
+            <a class="project-link"
+               href="https://github.com/GillesFokou/docker-labs"
+               target="_blank" rel="noopener">
+                Voir le projet sur GitHub →
+            </a>
+        </p>
+
+        <h3>Android Projects</h3>
+        <p>
+            Applications mobiles et expérimentations réalisées
+            avec Android Studio.
+        </p>
+        <p>
+            <a class="project-link"
+               href="https://github.com/GillesFokou/android-projects"
+               target="_blank" rel="noopener">
+                Voir le projet sur GitHub →
+            </a>
+        </p>
+
+        <h3>Networking Labs</h3>
+        <p>
+            Travaux pratiques sur les réseaux informatiques,
+            les protocoles et la configuration des infrastructures.
+        </p>
+        <p>
+            <a class="project-link"
+               href="https://github.com/GillesFokou/networking-labs"
+               target="_blank" rel="noopener">
+                Voir le projet sur GitHub →
+            </a>
+        </p>
+
+        <p>
+            <a href="https://github.com/GillesFokou?tab=repositories"
+               target="_blank" rel="noopener">
+                Retrouver tous mes projets sur GitHub →
+            </a>
         </p>
     </section>
 
@@ -240,9 +294,9 @@
         </p>
 
         <p>
-            Ces différentes expériences m'ont permis de découvrir
-            d'autres environnements de travail, de gagner en
-            autonomie et de développer mon sens du collectif.
+            Ces expériences m'ont permis de gagner en autonomie,
+            de découvrir différents environnements de travail
+            et de développer mon sens du collectif.
         </p>
     </section>
 
@@ -254,9 +308,8 @@
             Pour en savoir plus sur mon parcours, consultez mon CV.
         </p>
 
-        <a href="CV PRO GILLES.pdf"
-           target="_blank"
-           rel="noopener">
+        <a href="CV%20PRO%20GILLES.pdf"
+           target="_blank" rel="noopener">
             Consulter mon CV (PDF)
         </a>
     </section>
