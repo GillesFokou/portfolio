@@ -12,6 +12,8 @@
             --primary: #1a365d;
             --accent: #b45309;
             --border-color: #e5dec9;
+            --tag-bg: #fef3c7;
+            --tag-text: #92400e;
         }
 
         body {
@@ -33,27 +35,27 @@
 
         header h1 {
             margin: 0 0 10px 0;
-            font-size: 2.4em;
-            letter-spacing: 1px;
+            font-size: 2.2em;
             font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
         }
 
         header p {
             margin: 5px 0;
-            font-size: 1.1em;
-            opacity: 0.85;
+            font-size: 1.05em;
+            opacity: 0.9;
             font-style: italic;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
         .blog-post {
             background: var(--paper-bg);
-            padding: 40px;
+            padding: 35px;
             margin-bottom: 35px;
             border: 1px solid var(--border-color);
             box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.04);
@@ -73,16 +75,23 @@
         .blog-post h2 {
             color: var(--primary);
             margin-top: 0;
-            font-size: 1.6em;
+            font-size: 1.5em;
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 10px;
             font-family: 'Courier New', monospace;
         }
 
+        .blog-post h3 {
+            color: var(--accent);
+            font-size: 1.1em;
+            margin-top: 20px;
+            font-family: 'Courier New', monospace;
+        }
+
         .meta-tag {
             display: inline-block;
-            background: #fef3c7;
-            color: #92400e;
+            background: var(--tag-bg);
+            color: var(--tag-text);
             padding: 2px 10px;
             font-size: 0.8em;
             font-family: 'Courier New', monospace;
@@ -97,12 +106,12 @@
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .projects-grid {
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
             gap: 15px;
             margin-top: 20px;
         }
@@ -110,7 +119,7 @@
         .project-card {
             background: #faf6ee;
             border: 1px solid var(--border-color);
-            padding: 15px 20px;
+            padding: 15px;
             border-radius: 4px;
         }
 
@@ -118,11 +127,12 @@
             margin: 0 0 5px 0;
             color: var(--primary);
             font-family: 'Courier New', monospace;
+            font-size: 1em;
         }
 
         .project-card p {
             margin: 0;
-            font-size: 0.95em;
+            font-size: 0.9em;
             color: #555;
         }
 
@@ -146,7 +156,6 @@
             letter-spacing: 1px;
             transition: background 0.2s;
             margin-top: 15px;
-            border: none;
         }
 
         .cv-btn:hover {
@@ -168,103 +177,116 @@
 
 <header>
     <h1>Gilles Adrien FOKOU TOUO</h1>
-    <p>Élève-ingénieur Informatique et Réseaux (ING4) — Spécialisation Cybersécurité</p>
-    <p>Carnet de Compétences &amp; Récit de Parcours</p>
+    <p>Élève-ingénieur Informatique et Réseaux (ING4) — ESAIP Angers</p>
+    <p>Spécialisation Cybersécurité &amp; Systèmes | Carnet de Compétences PPP</p>
 </header>
 
 <div class="container">
 
-    <!-- Article 1 -->
+    <!-- Section 1 : Qui je suis ? -->
     <article class="blog-post">
-        <span class="meta-tag">Introduction &amp; Vocation</span>
-        <h2>Qui je suis ? — Le déclic de la cybersécurité</h2>
-        <p>Mon parcours en informatique trouve ses racines dès le lycée, où j'occupais le poste de vice-responsable du club informatique. Avec mon équipe, nous avions mis sur pied un serveur administré sous Linux pour permettre aux élèves de se connecter en local, d'accéder à des cours et d'effectuer des exercices corrigés.</p>
-        <p>Un jour, notre serveur a subi une cyberattaque et une partie du système a été détruite. Cette confrontation directe avec la vulnérabilité des infrastructures a été un véritable déclic. Plutôt que de me décourager, cet incident a transformé ma curiosité en une vocation pour la protection des données et la sécurité des réseaux.</p>
-        <p>Aujourd'hui en 4e année à l'ESAIP, je poursuis cette ambition avec la ferme volonté de concevoir des systèmes plus sûrs et résilients.</p>
+        <span class="meta-tag">Section 1</span>
+        <h2>Qui je suis ? — Parcours, valeurs et vision</h2>
+        <p>Mon attrait pour l'ingénierie informatique est né au lycée en tant que vice-responsable du club informatique. Notre équipe avait déployé un serveur local administré sous Linux destiné à héberger des ressources pédagogiques et des exercices corrigés. L'intrusion et la détérioration subies par ce système lors d'une cyberattaque ont déclenché mon intérêt fondateur pour la sécurité des réseaux : comprendre les failles pour bâtir des défenses solides.</p>
+        <p>Aujourd'hui élève-ingénieur en 4e année à l'ESAIP (filière Informatique et Réseaux, option Cybersécurité), je construis un profil combinant rigueur d'analyse, maîtrise des protocoles réseau et adaptabilité. Mon objectif professionnel est d'évoluer vers la sécurisation des architectures critiques, en intégrant les enjeux de résilience matérielle, de traitement de données et d'éthique technologique.</p>
     </article>
 
-    <!-- Article 2 -->
+    <!-- Section 2 : Certifications & Compétences Avancées -->
     <article class="blog-post">
-        <span class="meta-tag">Expertises &amp; Certifications</span>
-        <h2>Compétences avancées : PPSM, MATLAB &amp; Machine Learning</h2>
-        <p>Au-delà de mon cursus en réseau, je valide des compétences pointues à l'intersection des mathématiques appliquées et des systèmes :</p>
+        <span class="meta-tag">Expertises Techniques</span>
+        <h2>Compétences clés : PPSM, MATLAB &amp; Machine Learning</h2>
+        <p>Afin d'appuyer mon profil d'ingénieur, j'articule mes compétences autour de trois piliers complémentaires :</p>
         <ul>
-            <li><strong>PPSM :</strong> Maîtrise des protocoles, services et mécanismes de sécurité pour l'analyse et l'authentification des architectures.</li>
-            <li><strong>MATLAB :</strong> Traitement du signal et simulation numérique, appliqués notamment dans le cadre de mes projets R&amp;D.</li>
-            <li><strong>Machine Learning :</strong> Apprentissage automatique et analyse de données pour la détection prédictive d'anomalies.</li>
+            <li><strong>PPSM (Ports, Protocoles, Services et Mécanismes de sécurité) :</strong> Analyse fine du trafic, cartographie de surface d'attaque et application des politiques de filtrage et d'authentification.</li>
+            <li><strong>MATLAB / Traitement du Signal :</strong> Modélisation mathématique et simulation spectrale, notamment exploitées pour l'étude des interférences électromagnétiques et du signal radio.</li>
+            <li><strong>Machine Learning :</strong> Mise en œuvre d'algorithmes d'apprentissage (classification, détection d'anomalies) applicables à la surveillance comportementale de flux réseaux.</li>
         </ul>
     </article>
 
-    <!-- Article 3 -->
+    <!-- Section 3 : Analyse des 3 Expériences Professionnelles -->
     <article class="blog-post">
-        <span class="meta-tag">Projet R&amp;D</span>
-        <h2>Projet PSIR : Sécurité des communications radio</h2>
-        <p>Étude approfondie des vulnérabilités des réseaux sans fil face aux attaques de brouillage (<em>jamming</em>) sur la couche physique.</p>
+        <span class="meta-tag">Section 2</span>
+        <h2>Analyse approfondie de mes Expériences &amp; Projets</h2>
+
+        <!-- Expérience 1 -->
+        <h3>1. Projet PSIR — Recherche &amp; Développement en Sécurité Radio (Projet Scolaire ESAIP)</h3>
+        <p><strong>Contexte :</strong> Analyse de la résilience des communications sans fil face aux attaques par brouillage intentionnel (<em>jamming</em>) sur la couche physique.</p>
         <ul>
-            <li>Analyse des signaux et évaluation de la robustesse des transmissions.</li>
-            <li>Modélisation de contre-mesures (sauts de fréquence) et approche R&amp;D rigoureuse.</li>
+            <li><strong>Compétences développées &amp; mises en œuvre :</strong> Analyse spectrale sous MATLAB, caractérisation de signaux perturbateurs, formulation d'hypothèses d'atténuation.</li>
+            <li><strong>Compétences métiers :</strong> Posture R&amp;D d'ingénieur, évaluation des menaces physiques sur les infrastructures critiques, capacité de synthèse technique.</li>
+        </ul>
+
+        <!-- Expérience 2 -->
+        <h3>2. Conception Logicielle &amp; Solveurs Algorithmiques (Mobilité VSB-TUO &amp; ESAIP)</h3>
+        <p><strong>Contexte :</strong> Réalisation du projet de solveur de labyrinthe (<em>MazeSolver</em> en C++) lors de ma mobilité Erasmus en République Tchèque, et de projets orientés objet (Java/Android).</p>
+        <ul>
+            <li><strong>Compétences développées &amp; mises en œuvre :</strong> Algorithmique avancée, structures de données complexes, gestion de version structurée avec Git/GitHub.</li>
+            <li><strong>Compétences métiers :</strong> Rigueur de développement logiciel, adaptabilité technique en environnement international, résolution méthodique de problèmes.</li>
+        </ul>
+
+        <!-- Expérience 3 -->
+        <h3>3. Immersion Opérationnelle en Entreprise (ADAPEI &amp; Terra Botanica)</h3>
+        <p><strong>Contexte :</strong> Postes sur le terrain en tant qu'opérateur câbleur et employé polyvalent.</p>
+        <ul>
+            <li><strong>Compétences développées &amp; mises en œuvre :</strong> Lecture de schémas techniques, câblage conforme aux spécifications, respect strict des consignes QHSE.</li>
+            <li><strong>Compétences métiers :</strong> Rigueur opérationnelle, réactivité face aux contraintes de production, esprit d'équipe et ponctualité.</li>
         </ul>
     </article>
 
-    <!-- Article 4 : Nouveaux Projets Git -->
+    <!-- Section 4 : Dépôts GitHub & Réalisations -->
     <article class="blog-post">
-        <span class="meta-tag">Réalisations Git</span>
-        <h2>Mes Projets &amp; Travaux Pratiques</h2>
-        <p>Voici un aperçu des dépôts de code et applications que je développe et versionne sur mon GitHub :</p>
-        
+        <span class="meta-tag">Portfolio Git</span>
+        <h2>Projets &amp; Dépôts GitHub</h2>
+        <p>Retrouvez mes travaux de développement et de gestion de version sur mon compte GitHub :</p>
+
         <div class="projects-grid">
             <div class="project-card">
-                <h4>ApplicationMusic</h4>
-                <p>Développement logiciel et gestion audio / multimédia.</p>
+                <h4>MazeSolver</h4>
+                <p>Solveur d'algorithme de labyrinthe développé en C++ (Projet Erasmus VSB-TUO).</p>
             </div>
             <div class="project-card">
                 <h4>android-project</h4>
-                <p>Conception et développement d'applications mobiles sur l'écosystème Android.</p>
+                <p>Développement d'application mobile et gestion du cycle de vie des composants Android.</p>
             </div>
             <div class="project-card">
-                <h4>Cycle-de-vie</h4>
-                <p>Projet axé sur la gestion du cycle de vie des logiciels ou des composants système.</p>
+                <h4>ApplicationMusic</h4>
+                <p>Conception orientée objet et gestion de flux multimédia/audio.</p>
             </div>
             <div class="project-card">
                 <h4>desktop-tutorial</h4>
-                <p>Travaux pratiques et prise en main d'environnements de développement bureautique.</p>
+                <p>Travaux pratiques et environnement de développement d'applications de bureau.</p>
+            </div>
+            <div class="project-card">
+                <h4>portfolio</h4>
+                <p>Code source du présent carnet de compétences hébergé via GitHub Pages.</p>
             </div>
         </div>
     </article>
 
-    <!-- Article 5 -->
+    <!-- Section 5 : Engagements Bénévoles (LEP) -->
     <article class="blog-post">
-        <span class="meta-tag">Expérience Professionnelle</span>
-        <h2>Immersion en entreprise (ADAPEI &amp; Terra Botanica)</h2>
-        <p>Expériences concrètes en milieu professionnel (opérateur câbleur et employé polyvalent).</p>
+        <span class="meta-tag">Section 3 — LEP</span>
+        <h2>Valorisation de mes Engagements Bénévoles (ING3 &amp; ING4 S7)</h2>
+        <p><strong>Cadre des engagements :</strong> Participation active au sein des associations de l'ESAIP (SAFE, BDA) et actions à caractère social et pédagogique (encadrement lors du camp Mayanette au Cameroun).</p>
+        <h3>Analyse des Soft Skills développées :</h3>
         <ul>
-            <li>Respect strict des procédures de sécurité et des normes techniques.</li>
-            <li>Rigueur opérationnelle, réactivité et intégration au sein d'équipes pluridisciplinaires.</li>
+            <li><strong>Sens des responsabilités et initiative :</strong> Organisation logistique et accompagnement de groupes dans un cadre éducatif et associatif.</li>
+            <li><strong>Communication &amp; Pédagogie :</strong> Écoute active, capacité de médiation et transmission de compétences auprès de publics variés.</li>
+            <li><strong>Conscience citoyenne :</strong> Engagement en alignement avec la démarche de responsabilité sociétale et d'éthique portée par l'ESAIP.</li>
         </ul>
     </article>
 
-    <!-- Article 6 -->
-    <article class="blog-post">
-        <span class="meta-tag">Engagement Citoyen</span>
-        <h2>Vie associative &amp; Pédagogie</h2>
-        <p>Implication au sein des associations de l'ESAIP (SAFE, BDA) et engagement solidaire (animateur pour le camp Mayanette au Cameroun).</p>
-        <ul>
-            <li>Sens des responsabilités, esprit d'initiative et gestion de projets collectifs.</li>
-            <li>Transmission, écoute active et engagement au service de la collectivité.</li>
-        </ul>
-    </article>
-
-    <!-- CV Section -->
+    <!-- Section 6 : CV & Téléchargement -->
     <div class="cv-box">
-        <h2>Mon Profil &amp; CV</h2>
-        <p>Téléchargez mon CV détaillé au format PDF pour consulter l'ensemble de mon parcours.</p>
-        <a href="CV PRO GILLES.pdf" class="cv-btn" target="_blank">Télécharger le CV (PDF)</a>
+        <h2>Section 4 — Profil &amp; CV Mis à jour</h2>
+        <p>Consultez mon CV pour plus d'informations.</p>
+        <a href="CV PRO GILLES.pdf" class="cv-btn" target="_blank">Télécharger mon CV (PDF)</a>
     </div>
 
 </div>
 
 <footer>
-    <p>&copy; 2026 Gilles Adrien FOKOU TOUO — Carnet de Compétences ESAIP</p>
+    <p>&copy; 2026 Gilles Adrien FOKOU TOUO — Carnet de Compétences</p>
 </footer>
 
 </body>
