@@ -100,6 +100,32 @@
             margin-bottom: 10px;
         }
 
+        .projects-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background: #faf6ee;
+            border: 1px solid var(--border-color);
+            padding: 15px 20px;
+            border-radius: 4px;
+        }
+
+        .project-card h4 {
+            margin: 0 0 5px 0;
+            color: var(--primary);
+            font-family: 'Courier New', monospace;
+        }
+
+        .project-card p {
+            margin: 0;
+            font-size: 0.95em;
+            color: #555;
+        }
+
         .cv-box {
             text-align: center;
             background: var(--paper-bg);
@@ -180,15 +206,30 @@
         </ul>
     </article>
 
-    <!-- Article 4 -->
+    <!-- Article 4 : Nouveaux Projets Git -->
     <article class="blog-post">
-        <span class="meta-tag">Projets &amp; Mobilité</span>
-        <h2>Ingénierie Logicielle : Erasmus &amp; Développement</h2>
-        <p>Conception d'applications orientées objet et de solveurs algorithmiques (projet de labyrinthe en République Tchèque à la VSB-TUO et jeu de bataille navale en Java à l'ESAIP).</p>
-        <ul>
-            <li>Rigueur de conception, modularité et gestion de version (Git).</li>
-            <li>Autonomie technique et adaptabilité en contexte multiculturel.</li>
-        </ul>
+        <span class="meta-tag">Réalisations Git</span>
+        <h2>Mes Projets &amp; Travaux Pratiques</h2>
+        <p>Voici un aperçu des dépôts de code et applications que je développe et versionne sur mon GitHub :</p>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <h4>ApplicationMusic</h4>
+                <p>Développement logiciel et gestion audio / multimédia.</p>
+            </div>
+            <div class="project-card">
+                <h4>android-project</h4>
+                <p>Conception et développement d'applications mobiles sur l'écosystème Android.</p>
+            </div>
+            <div class="project-card">
+                <h4>Cycle-de-vie</h4>
+                <p>Projet axé sur la gestion du cycle de vie des logiciels ou des composants système.</p>
+            </div>
+            <div class="project-card">
+                <h4>desktop-tutorial</h4>
+                <p>Travaux pratiques et prise en main d'environnements de développement bureautique.</p>
+            </div>
+        </div>
     </article>
 
     <!-- Article 5 -->
