@@ -1,333 +1,1348 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gilles Adrien FOKOU TOUO — Carnet de Compétences | ESAIP ING</title>
+    <meta name="theme-color" content="#0d1117">
+    <meta name="description" content="Portfolio de Gilles Adrien FOKOU TOUO, étudiant ingénieur en informatique et réseaux à l'ESAIP.">
+    <title>Gilles FOKOU — Portfolio</title>
+
     <style>
         :root {
-            --primary: #1a365d;
-            --accent: #b45309;
-            --border-color: #d1c7b7;
-            --tag-bg: #fef3c7;
-            --tag-text: #92400e;
+            --bg: #0d1117;
+            --surface: #161b22;
+            --surface-light: #1c2128;
+            --border: #30363d;
+            --text: #e6edf3;
+            --muted: #919ba6;
+            --blue: #58a6ff;
+            --green: #3fb950;
+            --orange: #d29922;
+            --mono: "Cascadia Code", "Fira Code", Consolas, monospace;
+            --sans: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            --width: 1120px;
         }
 
-        body {
-            font-family: 'Georgia', serif;
-            line-height: 1.8;
-            color: #2c2c2c;
-            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.9), rgba(15, 23, 42, 0.95)), url('fond 1.avif') no-repeat center center fixed;
-            background-size: cover;
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        header {
-            background: linear-gradient(rgba(255, 253, 249, 0.92), rgba(255, 253, 249, 0.92)), url('fond.webp');
-            background-size: cover;
-            color: #2c2c2c;
-            padding: 40px 20px;
-            text-align: left;
-            border-bottom: 3px solid var(--primary);
-            max-width: 850px;
-            margin: 40px auto 0 auto;
-            border-top: 1px solid var(--border-color);
-            border-left: 1px solid var(--border-color);
-            border-right: 1px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            position: relative;
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 85px;
         }
 
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background-color: var(--accent);
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--sans);
+            line-height: 1.7;
         }
 
-        header h1 {
-            margin: 0 0 10px 0;
-            font-size: 2.2em;
-            font-family: 'Courier New', monospace;
-            letter-spacing: 1px;
-            color: var(--primary);
+        a {
+            color: inherit;
+            text-decoration: none;
         }
 
-        header p {
-            margin: 5px 0;
-            font-size: 1.05em;
-            color: #555;
-            font-style: italic;
+        button {
+            font: inherit;
         }
 
         .container {
-            max-width: 850px;
-            margin: 30px auto;
-            padding: 0 20px;
+            width: min(var(--width), calc(100% - 40px));
+            margin: auto;
         }
 
-        .blog-post {
-         
-            background: linear-gradient(rgba(255, 253, 249, 0.93), rgba(255, 253, 249, 0.93)), url('fond.webp');
-            background-size: cover;
-            padding: 35px;
-            margin-bottom: 35px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            position: relative;
+        .mono {
+            font-family: var(--mono);
         }
 
-        .blog-post::before {
-            content: "";
-            position: absolute;
+        .muted {
+            color: var(--muted);
+        }
+
+        .blue {
+            color: var(--blue);
+        }
+
+        .green {
+            color: var(--green);
+        }
+
+        /* Navigation */
+
+        header {
+            position: sticky;
             top: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background-color: var(--primary);
+            z-index: 100;
+            background: rgba(13, 17, 23, .94);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(12px);
         }
 
-        .blog-post h2 {
-            color: var(--primary);
-            margin-top: 0;
-            font-size: 1.5em;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 10px;
-            font-family: 'Courier New', monospace;
+        .navbar {
+            min-height: 68px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
         }
 
-        .blog-post h3 {
-            color: var(--accent);
-            font-size: 1.1em;
-            margin-top: 22px;
-            font-family: 'Courier New', monospace;
+        .brand {
+            font-family: var(--mono);
+            font-weight: 700;
+            font-size: 16px;
+            white-space: nowrap;
         }
 
-        .meta-tag {
-            display: inline-block;
-            background: var(--tag-bg);
-            color: var(--tag-text);
-            padding: 2px 10px;
-            font-size: 0.8em;
-            font-family: 'Courier New', monospace;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            border: 1px solid #fde68a;
+        .brand span {
+            color: var(--green);
         }
 
-        ul {
-            padding-left: 20px;
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
         }
 
-        li {
-            margin-bottom: 8px;
+        .nav-links a {
+            color: var(--muted);
+            font-size: 13px;
+            transition: color .2s;
         }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        .nav-links .github-link {
+            color: var(--blue);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 7px 12px;
+        }
+
+        .menu-toggle {
+            display: none;
+            color: var(--text);
+            background: none;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 7px 10px;
+            cursor: pointer;
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 105px 0 90px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .hero-label {
+            font-family: var(--mono);
+            font-size: 13px;
+            color: var(--green);
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+            font-size: clamp(36px, 6vw, 65px);
+            line-height: 1.13;
+            letter-spacing: -2px;
+            max-width: 850px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--blue);
+        }
+
+        .hero-description {
+            color: var(--muted);
+            max-width: 690px;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 10px 17px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            transition: .2s;
+        }
+
+        .button-primary {
+            background: #238636;
+            border-color: #238636;
+            color: white;
+        }
+
+        .button-primary:hover {
+            background: #2ea043;
+        }
+
+        .button-secondary {
+            color: var(--text);
+            background: var(--surface);
+        }
+
+        .button-secondary:hover {
+            border-color: var(--blue);
+            color: var(--blue);
+        }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+            margin-top: 35px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .hero-meta span::before {
+            content: "●";
+            color: var(--green);
+            font-size: 9px;
+            margin-right: 8px;
+        }
+
+        /* Sections */
+
+        section {
+            padding: 82px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-heading {
+            margin-bottom: 35px;
+        }
+
+        .section-index {
+            display: block;
+            color: var(--green);
+            font-family: var(--mono);
+            font-size: 12px;
+            margin-bottom: 9px;
+        }
+
+        .section-heading h2 {
+            font-size: 29px;
+            letter-spacing: -.7px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            margin-top: 9px;
+            max-width: 650px;
+            font-size: 14px;
+        }
+
+        /* About */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.4fr .8fr;
+            gap: 45px;
+            align-items: start;
+        }
+
+        .about-text p {
+            color: var(--muted);
+            margin-bottom: 17px;
+        }
+
+        .about-text strong {
+            color: var(--text);
+        }
+
+        .about-facts {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--surface);
+            padding: 22px;
+        }
+
+        .fact {
+            padding: 13px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .fact:last-child {
+            border-bottom: 0;
+        }
+
+        .fact-label {
+            display: block;
+            font-family: var(--mono);
+            font-size: 11px;
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+
+        .fact-value {
+            font-size: 14px;
+        }
+
+        /* Skills */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .skill-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 22px;
+        }
+
+        .skill-card h3 {
+            font-size: 15px;
+            margin-bottom: 14px;
+        }
+
+        .skill-card h3 span {
+            color: var(--blue);
+            font-family: var(--mono);
+            margin-right: 8px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            background: #212830;
+            color: #b8c5d1;
+            border: 1px solid #303b46;
+            border-radius: 5px;
+            padding: 4px 9px;
+            font-family: var(--mono);
+            font-size: 11px;
+        }
+
+        /* Projects */
 
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 17px;
         }
 
         .project-card {
-            background: rgba(250, 246, 238, 0.95);
-            border: 1px solid var(--border-color);
-            padding: 15px;
-            border-radius: 4px;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-            transition: transform 0.2s, box-shadow 0.2s;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            min-height: 245px;
+            transition: border-color .2s, transform .2s;
         }
 
         .project-card:hover {
+            border-color: #536779;
             transform: translateY(-3px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            border-color: var(--accent);
         }
 
-        .project-card h4 {
-            margin: 0 0 5px 0;
-            color: var(--primary);
-            font-family: 'Courier New', monospace;
-            font-size: 1em;
+        .project-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .project-icon {
+            font-family: var(--mono);
+            color: var(--blue);
+            font-size: 20px;
+        }
+
+        .project-type {
+            font-family: var(--mono);
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .project-card h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
         }
 
         .project-card p {
-            margin: 0;
-            font-size: 0.9em;
-            color: #555;
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 18px;
         }
 
-        .cv-box {
-            text-align: center;
-            background: linear-gradient(rgba(255, 253, 249, 0.93), rgba(255, 253, 249, 0.93)), url('fond.webp');
-            background-size: cover;
-            padding: 40px;
-            border: 1px solid var(--border-color);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            margin-bottom: 40px;
+        .project-card .tags {
+            margin-top: auto;
+            margin-bottom: 17px;
         }
 
-        .cv-btn {
-            display: inline-block;
-            background: var(--primary);
-            color: white;
-            padding: 12px 25px;
-            text-decoration: none;
-            font-family: 'Courier New', monospace;
-            font-weight: bold;
-            letter-spacing: 1px;
-            transition: background 0.2s;
-            margin: 8px 5px;
-            font-size: 0.9em;
+        .project-link {
+            color: var(--blue);
+            font-family: var(--mono);
+            font-size: 12px;
+            width: fit-content;
         }
 
-        .cv-btn:hover {
-            background: var(--accent);
+        .project-link:hover {
+            text-decoration: underline;
         }
 
-        .btn-group {
-            margin-top: 15px;
+        /* Experience */
+
+        .timeline {
+            border-left: 1px solid var(--border);
+            margin-left: 8px;
+            padding-left: 28px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 33px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            width: 9px;
+            height: 9px;
+            background: var(--green);
+            border-radius: 50%;
+            left: -33px;
+            top: 8px;
+            box-shadow: 0 0 0 4px var(--bg);
+        }
+
+        .timeline-date {
+            font-family: var(--mono);
+            color: var(--green);
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .timeline-item h3 {
+            font-size: 17px;
+        }
+
+        .timeline-place {
+            color: var(--blue);
+            font-size: 13px;
+            margin: 3px 0 9px;
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+            font-size: 13px;
+            max-width: 720px;
+        }
+
+        /* Education */
+
+        .education-card {
+            border: 1px solid var(--border);
+            background: var(--surface);
+            border-radius: 8px;
+            padding: 25px;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
+            justify-content: space-between;
+            gap: 25px;
+            align-items: center;
         }
+
+        .education-card h3 {
+            font-size: 18px;
+        }
+
+        .education-card p {
+            color: var(--muted);
+            font-size: 13px;
+            margin-top: 5px;
+        }
+
+        .education-date {
+            color: var(--green);
+            font-family: var(--mono);
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        /* Certifications */
+
+        .certifications {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .certification {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 15px;
+            padding: 17px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 7px;
+        }
+
+        .certification strong {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .certification span {
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        .certification a {
+            color: var(--blue);
+            font-family: var(--mono);
+            font-size: 11px;
+            white-space: nowrap;
+        }
+
+        /* Personal */
+
+        .personal-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .personal-card {
+            padding: 22px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .personal-card h3 {
+            font-size: 15px;
+            margin-bottom: 8px;
+        }
+
+        .personal-card p {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        /* Terminal */
+
+        .terminal {
+            background: #090d12;
+            border: 1px solid var(--border);
+            border-radius: 9px;
+            overflow: hidden;
+            max-width: 760px;
+        }
+
+        .terminal-bar {
+            height: 40px;
+            background: #161b22;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            padding: 0 14px;
+            gap: 7px;
+        }
+
+        .terminal-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #59636e;
+        }
+
+        .terminal-title {
+            margin: auto;
+            margin-left: 12px;
+            font-family: var(--mono);
+            font-size: 11px;
+            color: var(--muted);
+        }
+
+        .terminal-body {
+            padding: 20px;
+            min-height: 230px;
+            font-family: var(--mono);
+            font-size: 12px;
+        }
+
+        .terminal-output {
+            color: #b7c3ce;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .terminal-form {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+        }
+
+        .terminal-prompt {
+            color: var(--green);
+            white-space: nowrap;
+        }
+
+        .terminal-input {
+            flex: 1;
+            min-width: 0;
+            background: transparent;
+            border: 0;
+            outline: none;
+            color: var(--text);
+            font-family: var(--mono);
+            font-size: 12px;
+        }
+
+        .terminal-hint {
+            color: var(--muted);
+            margin-top: 15px;
+            font-size: 11px;
+        }
+
+        /* Footer */
 
         footer {
-            text-align: center;
-            padding: 30px;
-            color: #cbd5e1;
-            font-size: 0.85em;
-            font-family: 'Courier New', monospace;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            margin-top: 60px;
+            padding: 35px 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .footer-content a {
+            color: var(--blue);
+        }
+
+        /* Responsive */
+
+        @media (max-width: 800px) {
+            .nav-links {
+                gap: 13px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 620px) {
+            .container {
+                width: min(100% - 30px, var(--width));
+            }
+
+            .navbar {
+                min-height: 60px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                right: 0;
+                background: var(--surface);
+                border-bottom: 1px solid var(--border);
+                padding: 17px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hero {
+                padding: 75px 0 65px;
+            }
+
+            .hero h1 {
+                letter-spacing: -1px;
+            }
+
+            section {
+                padding: 62px 0;
+            }
+
+            .skills-grid,
+            .projects-grid,
+            .certifications,
+            .personal-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .education-card {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .certification {
+                align-items: flex-start;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                scroll-behavior: auto !important;
+                transition-duration: .01ms !important;
+                animation-duration: .01ms !important;
+            }
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>Gilles Adrien FOKOU TOUO</h1>
-    <p>Élève-ingénieur Informatique et Réseaux (ING4) — ESAIP Angers</p>
-    <p>Spécialisation Cybersécurité &amp; Systèmes | Carnet de Compétences</p>
+    <div class="container navbar">
+        <a href="#accueil" class="brand"><span>~/</span> gilles-fokou</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <nav>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#parcours">Parcours</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#terminal">Terminal</a></li>
+                <li><a class="github-link" href="https://github.com/GillesFokou" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<div class="container">
+<main>
 
-    <!-- Section 1 : Qui je suis ? -->
-    <article class="blog-post">
-        <span class="meta-tag">Section 1</span>
-        <h2>Qui je suis ?</h2>
-        <p>Mon engagement envers l'ingénierie numérique est directement issu d'une expérience marquante au lycée, où j'assurais la vice-responsabilité du club informatique. En mettant en place un serveur local sous Linux pour donner accès à des cours et exercices corrigés aux élèves, nous avons été confrontés à une cyberattaque qui a partiellement détruit nos installations. Loin de m'en détourner, cet événement a agi comme le déclic fondateur de ma vocation : comprendre l'architecture intime des réseaux pour en assurer la robustesse et la défense.</p>
-        <p>Aujourd'hui élève-ingénieur en 4e année à l'ESAIP (option Informatique et Réseaux), je façonne mon profil professionnel autour de la résilience des infrastructures, de la modélisation réseau et de la sécurité opérationnelle. Je cherche à allier une rigueur mathématique et algorithmique poussée à une vision éthique des technologies.</p>
-    </article>
+    <!-- ACCUEIL -->
+    <div class="hero" id="accueil">
+        <div class="container">
+            <p class="hero-label">// Portfolio personnel — 2026</p>
 
-    <!-- Section 2 : Analyse réflexive des expertises & Certificats -->
-    <article class="blog-post">
-        <span class="meta-tag">Expertises Techniques</span>
-        <h2>Compétences Avancées : PPSM, Traitement du Signal &amp; IA</h2>
-        <p>Plutôt que de simples outils, ces disciplines constituent le cœur de ma démarche réflexive d'ingénieur. Les attestations officielles correspondantes sont consultables ci-dessous :</p>
-        <ul>
-            <li><strong>PPSM (Ports, Protocoles, Services et Mécanismes de sécurité) :</strong> Compréhension fine des vecteurs d'attaque sur les couches réseau, paramétrage de filtrages stricts et mise en place de politiques d'accès sécurisées.
-                <br><a href="Attestation_de_secouriste.pdf" target="_blank" style="color: var(--accent); font-size: 0.9em; text-decoration: underline;">-> Voir l'Attestion Secouriste</a>
-            </li>
-            <li><strong>MATLAB &amp; Simulation :</strong> Capacité à modéliser mathématiquement des signaux complexes et à simuler l'impact de perturbations radioélectriques sur la qualité de transmission. 
-                <br><a href="certificate MATLAB.pdf" target="_blank" style="color: var(--accent); font-size: 0.9em; text-decoration: underline;">-> Voir le certificat MATLAB</a>
-            </li>
-            <li><strong>Machine Learning :</strong> Utilisation d'algorithmes d'apprentissage automatique pour l'analyse comportementale de flux réseau et la détection d'anomalies en temps réel.
-                <br><a href="certificate Machine Learning.pdf" target="_blank" style="color: var(--accent); font-size: 0.9em; text-decoration: underline;">-> Voir le certificat Machine Learning</a>
-            </li>
-        </ul>
-    </article>
+            <h1>
+                Gilles Adrien<br>
+                <span>FOKOU TOUO</span>
+            </h1>
 
-    <!-- Section 3 : Analyse approfondie des expériences -->
-    <article class="blog-post">
-        <span class="meta-tag">Section 2</span>
-        <h2>Analyse de mes Expériences &amp; Projets Réalisés</h2>
+            <p class="hero-description">
+                Étudiant ingénieur en informatique et réseaux à l'ESAIP Angers,
+                avec un intérêt particulier pour la cybersécurité, les systèmes
+                informatiques et le développement logiciel.
+            </p>
 
-        <!-- Expérience 1 -->
-        <h3>1. Projet PSIR — Analyse de la Sécurité Radioélectrique (ESAIP)</h3>
-        <p><strong>Enjeu :</strong> Évaluer la résistance des communications sans fil face à des attaques de brouillage (<em>jamming</em>) ciblant la couche physique.</p>
-        <ul>
-            <li><strong>Compétences développées &amp; mises en œuvre :</strong> Traitement du signal sous MATLAB, étude d'agilité fréquentielle et modélisation de contre-mesures.</li>
-            <li><strong>Compétences métiers :</strong> Posture R&amp;D, analyse d'impact des menaces physiques sur les infrastructures réseau et rédaction de synthèses scientifiques.</li>
-        </ul>
+            <div class="hero-actions">
+                <a href="#projets" class="button button-primary">Voir mes projets →</a>
+                <a href="CV PRO GILLES.pdf" class="button button-secondary" target="_blank" rel="noopener noreferrer">
+                    Consulter mon CV ↗
+                </a>
+            </div>
 
-        <!-- Expérience 2 -->
-        <h3>2. Solveurs Algorithmiques &amp; Projets Logiciels (VSB-TUO / ESAIP)</h3>
-        <p><strong>Enjeu :</strong> Résolution algorithmique de structures complexes (projet <em>MazeSolver</em> en C++ lors de ma mobilité Erasmus en République Tchèque, et applications Android/Java à l'ESAIP).</p>
-        <ul>
-            <li><strong>Compétences développées &amp; mises en œuvre :</strong> Programmation orientée objet, conception algorithmique, versionnage de code sous Git/GitHub.</li>
-            <li><strong>Compétences métiers :</strong> Adaptabilité en environnement international multiculturel, rigueur de développement et résolution méthodique de problèmes informatiques.</li>
-        </ul>
-
-        <!-- Expérience 3 -->
-        <h3>3. Immersion Opérationnelle Terrain (ADAPEI &amp; Terra Botanica)</h3>
-        <p><strong>Enjeu :</strong> Réaliser des tâches techniques et logistiques en respectant des cadences et des exigences de qualité strictes.</p>
-        <ul>
-            <li><strong>Compétences développées &amp; mises en œuvre :</strong> Application de consignes QHSE, lecture de schémas techniques et assemblage conforme.</li>
-            <li><strong>Compétences métiers :</strong> Rigueur d'exécution sur le terrain, réactivité face aux contraintes et travail en équipe pluridisciplinaire.</li>
-        </ul>
-    </article>
-
-    <!-- Section 4 : Projets Git intégrés avec liens cliquables -->
-    <article class="blog-post">
-        <span class="meta-tag">Portfolio Git</span>
-        <h2>Réalisations &amp; Dépôts GitHub</h2>
-        <p>L'ensemble de mes dépôts de code source est accessible et versionné publiquement sur mon profil GitHub :</p>
-
-        <div class="projects-grid">
-            <a href="https://github.com/GillesFokou/MazeSolver" class="project-card" target="_blank">
-                <h4>MazeSolver</h4>
-                <p>Solveur d'algorithme de labyrinthe en C++ (Mobilité Erasmus VSB-TUO).</p>
-            </a>
-            <a href="https://github.com/GillesFokou/ApplicationMusic" class="project-card" target="_blank">
-                <h4>ApplicationMusic</h4>
-                <p>Application de lecture audio orientée objet et gestion multimédia.</p>
-            </a>
-            <a href="https://github.com/GillesFokou/Cycle-de-vie" class="project-card" target="_blank">
-                <h4>Cycle-de-vie</h4>
-                <p>Projet axé sur la gestion du cycle de vie des composants système.</p>
-            </a>
-        </div>
-    </article>
-
-    <!-- Section 5 : Engagements -->
-    <article class="blog-post">
-        <span class="meta-tag">Section 3 </span>
-        <h2>Valorisation de mes Engagements Bénévoles</h2>
-        <p><strong>Cadre d'engagement :</strong> Implication active au sein des associations de l'ESAIP (SAFE, BDA) ainsi qu'en animation sociopédagogique (encadrement du camp Mayanette au Cameroun).</p>
-        <h3>Soft Skills et Réflexion Citoyenne :</h3>
-        <ul>
-            <li><strong>Prise d'initiative &amp; Leadership :</strong> Encadrement de groupes, animation d'ateliers et gestion logistique en milieu éducatif.</li>
-            <li><strong>Pédagogie &amp; Transmission :</strong> Écoute active, vulgarisation technologique et accompagnement individuel.</li>
-            <li><strong>Éthique &amp; Responsabilité :</strong> Alignement fort avec les valeurs de solidarité et d'engagement prônées par l'ESAIP.</li>
-           <br><a href="Attestation_de_secouriste.pdf" target="_blank" style="color: var(--accent); font-size: 0.9em; text-decoration: underline;">-> Voir l'attestation secouriste</a> 
-        </ul>
-    </article>
-
-    <!-- Section 6 : Documents & CV -->
-    <div class="cv-box">
-        <h2>Section 4 — Documents</h2>
-        <p>Retrouvez ci-dessous mon CV à jour ainsi que mes certifications validées :</p>
-        <div class="btn-group">
-            <a href="CV PRO GILLES.pdf" class="cv-btn" target="_blank"> Télécharger mon CV</a>
+            <div class="hero-meta">
+                <span>ESAIP Angers</span>
+                <span>Informatique & Réseaux</span>
+                <span>Cybersécurité & Systèmes</span>
+            </div>
         </div>
     </div>
 
-</div>
+    <!-- À PROPOS -->
+    <section id="apropos">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-index">01 / ABOUT</span>
+                <h2>À propos de moi</h2>
+                <p>Mon parcours, mes motivations et ce qui m'a conduit vers l'informatique.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        Je suis étudiant en cycle ingénieur à l'<strong>ESAIP Angers</strong>,
+                        dans le domaine de l'informatique et des réseaux. Je m'intéresse
+                        particulièrement à la manière dont les systèmes fonctionnent,
+                        communiquent et peuvent être sécurisés.
+                    </p>
+
+                    <p>
+                        Mon intérêt pour l'informatique a commencé au lycée, lorsque
+                        j'étais vice-responsable du club informatique. Nous avions mis
+                        en place un serveur local sous Linux afin de rendre accessibles
+                        des cours et des exercices corrigés aux élèves.
+                    </p>
+
+                    <p>
+                        Une cyberattaque a ensuite partiellement détruit les installations.
+                        Cette expérience m'a fait prendre conscience de l'importance de
+                        la sécurité des systèmes et a progressivement orienté mon intérêt
+                        vers la cybersécurité.
+                    </p>
+
+                    <p>
+                        Aujourd'hui, je cherche à approfondir mes connaissances à travers
+                        les cours, les projets techniques et les expériences pratiques.
+                        J'aime comprendre les problèmes, expérimenter et apprendre en
+                        construisant des solutions.
+                    </p>
+                </div>
+
+                <aside class="about-facts">
+                    <div class="fact">
+                        <span class="fact-label">FORMATION</span>
+                        <div class="fact-value">Cycle ingénieur — ESAIP</div>
+                    </div>
+                    <div class="fact">
+                        <span class="fact-label">DOMAINE</span>
+                        <div class="fact-value">Informatique & Réseaux</div>
+                    </div>
+                    <div class="fact">
+                        <span class="fact-label">INTÉRÊTS TECHNIQUES</span>
+                        <div class="fact-value">Cybersécurité, Linux, développement</div>
+                    </div>
+                    <div class="fact">
+                        <span class="fact-label">MOBILITÉ</span>
+                        <div class="fact-value">Erasmus — République tchèque</div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMPÉTENCES -->
+    <section id="competences">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-index">02 / SKILLS</span>
+                <h2>Compétences techniques</h2>
+                <p>Les technologies et domaines abordés pendant ma formation et mes projets.</p>
+            </div>
+
+            <div class="skills-grid">
+                <article class="skill-card">
+                    <h3><span>01.</span> Cybersécurité & réseaux</h3>
+                    <div class="tags">
+                        <span class="tag">PPSM</span>
+                        <span class="tag">Protocoles</span>
+                        <span class="tag">Services réseau</span>
+                        <span class="tag">Mécanismes de sécurité</span>
+                        <span class="tag">Linux</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3><span>02.</span> Développement</h3>
+                    <div class="tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3><span>03.</span> Systèmes & outils</h3>
+                    <div class="tags">
+                        <span class="tag">Linux</span>
+                        <span class="tag">Git</span>
+                        <span class="tag">GitHub</span>
+                        <span class="tag">Android</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3><span>04.</span> Sciences & simulation</h3>
+                    <div class="tags">
+                        <span class="tag">MATLAB</span>
+                        <span class="tag">Simulation</span>
+                        <span class="tag">Traitement du signal</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3><span>05.</span> Intelligence artificielle</h3>
+                    <div class="tags">
+                        <span class="tag">Machine Learning</span>
+                        <span class="tag">Modèles</span>
+                        <span class="tag">Expérimentation</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3><span>06.</span> Méthodes de travail</h3>
+                    <div class="tags">
+                        <span class="tag">Travail en équipe</span>
+                        <span class="tag">Résolution de problèmes</span>
+                        <span class="tag">Autonomie</span>
+                        <span class="tag">Adaptabilité</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJETS -->
+    <section id="projets">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-index">03 / PROJECTS</span>
+                <h2>Projets techniques</h2>
+                <p>Quelques réalisations issues de mon parcours académique et personnel.</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <span class="project-icon">⌘</span>
+                        <span class="project-type">C++ / Algorithmique</span>
+                    </div>
+                    <h3>Maze Solver</h3>
+                    <p>
+                        Projet réalisé dans le cadre de ma mobilité Erasmus à
+                        VSB-TUO, en République tchèque. Développement d'un programme
+                        en C++ autour de la résolution de labyrinthes.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">C++</span>
+                        <span class="tag">Algorithmique</span>
+                        <span class="tag">Erasmus</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/GillesFokou/MazeSolver" target="_blank" rel="noopener noreferrer">
+                        Voir le code sur GitHub ↗
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <span class="project-icon">⌁</span>
+                        <span class="project-type">MATLAB / Réseaux</span>
+                    </div>
+                    <h3>Analyse de sécurité radioélectrique</h3>
+                    <p>
+                        Travail autour de l'analyse de phénomènes de brouillage
+                        radioélectrique (jamming), avec une approche basée sur
+                        la simulation et l'étude des signaux.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">MATLAB</span>
+                        <span class="tag">Jamming</span>
+                        <span class="tag">Signal</span>
+                    </div>
+                    <span class="project-link">Projet académique</span>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <span class="project-icon">♫</span>
+                        <span class="project-type">Application / Développement</span>
+                    </div>
+                    <h3>Application Music</h3>
+                    <p>
+                        Projet de développement d'une application autour de la
+                        musique. Le code source est disponible sur mon dépôt GitHub.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Développement</span>
+                        <span class="tag">Application</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/GillesFokou/ApplicationMusic" target="_blank" rel="noopener noreferrer">
+                        Voir le code sur GitHub ↗
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-top">
+                        <span class="project-icon">↻</span>
+                        <span class="project-type">Développement logiciel</span>
+                    </div>
+                    <h3>Cycle de vie</h3>
+                    <p>
+                        Projet de développement disponible sur GitHub, réalisé
+                        dans le cadre de mon apprentissage des outils et méthodes
+                        de programmation.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Programmation</span>
+                        <span class="tag">Git</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/GillesFokou/Cycle-de-vie" target="_blank" rel="noopener noreferrer">
+                        Voir le code sur GitHub ↗
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PARCOURS -->
+    <section id="parcours">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-index">04 / EXPERIENCE</span>
+                <h2>Expériences & parcours</h2>
+                <p>Les expériences qui ont contribué à mon parcours personnel et professionnel.</p>
+            </div>
+
+            <div class="timeline">
+
+                <article class="timeline-item">
+                    <div class="timeline-date">FORMATION ACTUELLE</div>
+                    <h3>Cycle ingénieur — Informatique et Réseaux</h3>
+                    <div class="timeline-place">ESAIP · Angers, France</div>
+                    <p>
+                        Formation d'ingénieur avec des enseignements en informatique,
+                        réseaux, systèmes et cybersécurité.
+                    </p>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">MOBILITÉ INTERNATIONALE</div>
+                    <h3>Mobilité Erasmus</h3>
+                    <div class="timeline-place">VSB — Technical University of Ostrava · République tchèque</div>
+                    <p>
+                        Expérience universitaire à l'étranger, découverte d'un
+                        nouvel environnement académique et réalisation de projets
+                        techniques, notamment en C++.
+                    </p>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">EXPÉRIENCE PROFESSIONNELLE</div>
+                    <h3>Expériences terrain</h3>
+                    <div class="timeline-place">ADAPEI & Terra Botanica</div>
+                    <p>
+                        Expériences dans des environnements professionnels nécessitant
+                        le respect des consignes, le travail en équipe, la rigueur
+                        et l'adaptation aux tâches confiées.
+                    </p>
+                </article>
+
+                <article class="timeline-item">
+                    <div class="timeline-date">ENGAGEMENT SCOLAIRE</div>
+                    <h3>Vice-responsable du club informatique</h3>
+                    <div class="timeline-place">Lycée · Cameroun</div>
+                    <p>
+                        Participation à la vie du club informatique et à la mise en
+                        place d'un serveur local Linux permettant aux élèves
+                        d'accéder à des ressources pédagogiques.
+                    </p>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMATION -->
+    <section id="formation">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-index">05 / EDUCATION</span>
+                <h2>Formation</h2>
+            </div>
+
+            <div class="education-card">
+                <div>
+                    <h3>Cycle ingénieur — Informatique et Réseaux</h3>
+                    <p>ESAIP · Angers, France</p>
+                    <p>Orientation : Cybersécurité & Systèmes</p>
+                </div>
+                <span class="education-date">En cours</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-index">06 / CERTIFICATIONS</span>
+                <h2>Certifications & documents</h2>
+                <p>Quelques documents attestant de mes formations et apprentissages.</p>
+            </div>
+
+            <div class="certifications">
+                <div class="certification">
+                    <div>
+                        <strong>MATLAB</strong><br>
+                        <span>Certificat de formation</span>
+                    </div>
+                    <a href="certificate MATLAB.pdf" target="_blank" rel="noopener noreferrer">Consulter ↗</a>
+                </div>
+
+                <div class="certification">
+                    <div>
+                        <strong>Machine Learning</strong><br>
+                        <span>Certificat de formation</span>
+                    </div>
+                    <a href="certificate Machine Learning.pdf" target="_blank" rel="noopener noreferrer">Consulter ↗</a>
+                </div>
+
+                <div class="certification">
+                    <div>
+                        <strong>Secourisme</strong><br>
+                        <span>Attestation de secouriste</span>
+                    </div>
+                    <a href="Attestation_de_secouriste.pdf" target="_blank" rel="noopener noreferrer">Consulter ↗</a>
+                </div>
+
+                <div class="certification">
+                    <div>
+                        <strong>Curriculum Vitae</strong><br>
+                        <span>Parcours et expériences</span>
+                    </div>
+                    <a href="CV PRO GILLES.pdf" target="_blank" rel="noopener noreferrer">Consulter ↗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ENGAGEMENTS -->
+    <section id="engagements">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-index">07 / BEYOND CODE</span>
+                <h2>Engagements & vie associative</h2>
+                <p>Des expériences qui complètent mon parcours académique.</p>
+            </div>
+
+            <div class="personal-grid">
+                <article class="personal-card">
+                    <h3>Associations ESAIP</h3>
+                    <p>
+                        Participation à la vie associative de l'école, notamment
+                        au sein de ESAIP SAFE et du BDA.
+                    </p>
+                </article>
+
+                <article class="personal-card">
+                    <h3>Camp Mayanette — Cameroun</h3>
+                    <p>
+                        Participation à des activités d'animation sociopédagogique
+                        et d'encadrement, dans un contexte collectif.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- TERMINAL -->
+    <section id="terminal">
+        <div class="container">
+            <div class="section-heading">
+                <span class="section-index">08 / INTERACTIVE</span>
+                <h2>Un petit terminal</h2>
+                <p>Quelques commandes pour parcourir le portfolio autrement.</p>
+            </div>
+
+            <div class="terminal">
+                <div class="terminal-bar">
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-dot"></span>
+                    <span class="terminal-title">gilles@portfolio: ~</span>
+                </div>
+
+                <div class="terminal-body">
+                    <div class="terminal-output" id="terminalOutput">Bienvenue dans mon portfolio.
+Tapez "help" pour afficher les commandes disponibles.</div>
+
+                    <form class="terminal-form" id="terminalForm">
+                        <span class="terminal-prompt">gilles@portfolio:~$</span>
+                        <input
+                            class="terminal-input"
+                            id="terminalInput"
+                            type="text"
+                            autocomplete="off"
+                            spellcheck="false"
+                            aria-label="Commande du terminal"
+                            autofocus
+                        >
+                    </form>
+
+                    <p class="terminal-hint">
+                        Commandes disponibles : help, about, skills, projects, github, cv, clear
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
 
 <footer>
-    <p>&copy; 2026 Gilles Adrien FOKOU TOUO — Carnet de Compétences | ESAIP ING</p>
+    <div class="container footer-content">
+        <p>© 2026 Gilles Adrien FOKOU TOUO — Portfolio personnel.</p>
+        <a href="https://github.com/GillesFokou" target="_blank" rel="noopener noreferrer">
+            github.com/GillesFokou ↗
+        </a>
+    </div>
 </footer>
+
+<script>
+    // Menu mobile
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+        const isOpen = navLinks.classList.toggle("open");
+        menuToggle.setAttribute("aria-expanded", String(isOpen));
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.textContent = "☰";
+        });
+    });
+
+    // Terminal interactif
+    const terminalForm = document.getElementById("terminalForm");
+    const terminalInput = document.getElementById("terminalInput");
+    const terminalOutput = document.getElementById("terminalOutput");
+
+    const commands = {
+        help: `Commandes disponibles :
+
+  about     Présentation personnelle
+  skills    Compétences techniques
+  projects  Liste des projets
+  github    Accès au profil GitHub
+  cv        Consulter mon CV
+  clear     Effacer le terminal`,
+
+        about: `Gilles Adrien FOKOU TOUO
+Étudiant ingénieur à l'ESAIP Angers.
+Domaines d'intérêt : informatique, réseaux,
+cybersécurité et développement logiciel.`,
+
+        skills: `Compétences abordées :
+
+  Langages       Java, C++, JavaScript
+  Réseaux        PPSM, protocoles, services
+  Systèmes       Linux
+  Simulation     MATLAB
+  IA             Machine Learning
+  Outils         Git, GitHub`,
+
+        projects: `Projets disponibles :
+
+  1. Maze Solver — C++
+  2. Analyse radioélectrique — MATLAB
+  3. Application Music
+  4. Cycle de vie
+
+Utilisez mon profil GitHub pour accéder aux dépôts.`,
+
+        github: `Ouverture du profil GitHub...
+https://github.com/GillesFokou`,
+
+        cv: `Ouverture du CV...
+Fichier : CV PRO GILLES.pdf`
+    };
+
+    function printCommand(command) {
+        const normalized = command.trim().toLowerCase();
+
+        if (!normalized) return;
+
+        if (normalized === "clear") {
+            terminalOutput.textContent = "";
+            return;
+        }
+
+        const response = commands[normalized] ||
+            `Commande inconnue : "${normalized}".
+Tapez "help" pour afficher les commandes disponibles.`;
+
+        terminalOutput.textContent +=
+            `\n\n$ ${command}\n${response}`;
+
+        if (normalized === "github") {
+            window.open(
+                "https://github.com/GillesFokou",
+                "_blank",
+                "noopener,noreferrer"
+            );
+        }
+
+        if (normalized === "cv") {
+            window.open(
+                "CV PRO GILLES.pdf",
+                "_blank",
+                "noopener,noreferrer"
+            );
+        }
+
+        terminalOutput.scrollTop = terminalOutput.scrollHeight;
+    }
+
+    terminalForm.addEventListener("submit", event => {
+        event.preventDefault();
+
+        const command = terminalInput.value;
+        printCommand(command);
+        terminalInput.value = "";
+    });
+</script>
 
 </body>
 </html>
