@@ -72,7 +72,7 @@
             color: var(--green);
         }
 
-        /* Navigation */
+        /* NAVIGATION */
 
         header {
             position: sticky;
@@ -119,13 +119,6 @@
             color: var(--text);
         }
 
-        .nav-links .github-link {
-            color: var(--blue);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 7px 12px;
-        }
-
         .menu-toggle {
             display: none;
             color: var(--text);
@@ -136,7 +129,7 @@
             cursor: pointer;
         }
 
-        /* Hero */
+        /* HERO */
 
         .hero {
             padding: 105px 0 90px;
@@ -224,7 +217,7 @@
             margin-right: 8px;
         }
 
-        /* Sections */
+        /* SECTIONS */
 
         section {
             padding: 82px 0;
@@ -255,7 +248,7 @@
             font-size: 14px;
         }
 
-        /* About */
+        /* ABOUT */
 
         .about-grid {
             display: grid;
@@ -301,7 +294,7 @@
             font-size: 14px;
         }
 
-        /* Skills */
+        /* SKILLS */
 
         .skills-grid {
             display: grid;
@@ -314,6 +307,12 @@
             border: 1px solid var(--border);
             border-radius: 8px;
             padding: 22px;
+            transition: border-color .2s, transform .2s;
+        }
+
+        .skill-card:hover {
+            border-color: #536779;
+            transform: translateY(-3px);
         }
 
         .skill-card h3 {
@@ -343,7 +342,7 @@
             font-size: 11px;
         }
 
-        /* Projects */
+        /* PROJECTS */
 
         .projects-grid {
             display: grid;
@@ -409,11 +408,7 @@
             width: fit-content;
         }
 
-        .project-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Experience */
+        /* EXPERIENCE */
 
         .timeline {
             border-left: 1px solid var(--border);
@@ -465,7 +460,7 @@
             max-width: 720px;
         }
 
-        /* Education */
+        /* EDUCATION */
 
         .education-card {
             border: 1px solid var(--border);
@@ -495,7 +490,7 @@
             white-space: nowrap;
         }
 
-        /* Certifications */
+        /* CERTIFICATIONS */
 
         .certifications {
             display: grid;
@@ -531,7 +526,7 @@
             white-space: nowrap;
         }
 
-        /* Personal */
+        /* PERSONAL */
 
         .personal-grid {
             display: grid;
@@ -556,7 +551,7 @@
             font-size: 13px;
         }
 
-        /* Terminal */
+        /* TERMINAL */
 
         .terminal {
             background: #090d12;
@@ -634,7 +629,7 @@
             font-size: 11px;
         }
 
-        /* Footer */
+        /* FOOTER */
 
         footer {
             padding: 35px 0;
@@ -649,11 +644,7 @@
             font-size: 12px;
         }
 
-        .footer-content a {
-            color: var(--blue);
-        }
-
-        /* Responsive */
+        /* RESPONSIVE */
 
         @media (max-width: 800px) {
             .nav-links {
@@ -751,7 +742,8 @@
     <div class="container navbar">
         <a href="#accueil" class="brand"><span>~/</span> gilles-fokou</a>
 
-        <button class="menu-toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Ouvrir le menu" aria-expanded="false">
             ☰
         </button>
 
@@ -763,7 +755,6 @@
                 <li><a href="#parcours">Parcours</a></li>
                 <li><a href="#certifications">Certifications</a></li>
                 <li><a href="#terminal">Terminal</a></li>
-                <li><a class="github-link" href="https://github.com/GillesFokou" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
             </ul>
         </nav>
     </div>
@@ -783,13 +774,18 @@
 
             <p class="hero-description">
                 Étudiant ingénieur en informatique et réseaux à l'ESAIP Angers,
-                avec un intérêt particulier pour la cybersécurité, les systèmes
-                informatiques et le développement logiciel.
+                avec un intérêt particulier pour la cybersécurité, les réseaux,
+                l'administration des systèmes et le développement logiciel.
             </p>
 
             <div class="hero-actions">
-                <a href="#projets" class="button button-primary">Voir mes projets →</a>
-                <a href="CV PRO GILLES.pdf" class="button button-secondary" target="_blank" rel="noopener noreferrer">
+                <a href="#projets" class="button button-primary">
+                    Voir mes projets →
+                </a>
+
+                <a href="CV PRO GILLES.pdf"
+                   class="button button-secondary"
+                   target="_blank" rel="noopener noreferrer">
                     Consulter mon CV ↗
                 </a>
             </div>
@@ -835,10 +831,11 @@
                     </p>
 
                     <p>
-                        Aujourd'hui, je cherche à approfondir mes connaissances à travers
-                        les cours, les projets techniques et les expériences pratiques.
-                        J'aime comprendre les problèmes, expérimenter et apprendre en
-                        construisant des solutions.
+                        Aujourd'hui, je développe mes connaissances dans plusieurs
+                        domaines : réseaux informatiques, administration des systèmes,
+                        cybersécurité et développement logiciel. J'aime comprendre les
+                        problèmes techniques, expérimenter et apprendre en construisant
+                        des solutions.
                     </p>
                 </div>
 
@@ -847,14 +844,17 @@
                         <span class="fact-label">FORMATION</span>
                         <div class="fact-value">Cycle ingénieur — ESAIP</div>
                     </div>
+
                     <div class="fact">
                         <span class="fact-label">DOMAINE</span>
                         <div class="fact-value">Informatique & Réseaux</div>
                     </div>
+
                     <div class="fact">
                         <span class="fact-label">INTÉRÊTS TECHNIQUES</span>
-                        <div class="fact-value">Cybersécurité, Linux, développement</div>
+                        <div class="fact-value">Cybersécurité, réseaux, Linux</div>
                     </div>
+
                     <div class="fact">
                         <span class="fact-label">MOBILITÉ</span>
                         <div class="fact-value">Erasmus — République tchèque</div>
@@ -870,23 +870,50 @@
             <div class="section-heading">
                 <span class="section-index">02 / SKILLS</span>
                 <h2>Compétences techniques</h2>
-                <p>Les technologies et domaines abordés pendant ma formation et mes projets.</p>
+                <p>
+                    Les technologies et domaines abordés pendant ma formation
+                    et mes projets.
+                </p>
             </div>
 
             <div class="skills-grid">
+
                 <article class="skill-card">
-                    <h3><span>01.</span> Cybersécurité & réseaux</h3>
+                    <h3><span>01.</span> Cybersécurité</h3>
                     <div class="tags">
                         <span class="tag">PPSM</span>
+                        <span class="tag">Analyse des ports</span>
                         <span class="tag">Protocoles</span>
-                        <span class="tag">Services réseau</span>
+                        <span class="tag">Services</span>
                         <span class="tag">Mécanismes de sécurité</span>
-                        <span class="tag">Linux</span>
+                        <span class="tag">Sécurité réseau</span>
                     </div>
                 </article>
 
                 <article class="skill-card">
-                    <h3><span>02.</span> Développement</h3>
+                    <h3><span>02.</span> Réseaux informatiques</h3>
+                    <div class="tags">
+                        <span class="tag">TCP/IP</span>
+                        <span class="tag">Adressage IP</span>
+                        <span class="tag">DNS</span>
+                        <span class="tag">DHCP</span>
+                        <span class="tag">Routage</span>
+                        <span class="tag">Protocoles réseau</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3><span>03.</span> Administration systèmes</h3>
+                    <div class="tags">
+                        <span class="tag">Linux</span>
+                        <span class="tag">Ligne de commande</span>
+                        <span class="tag">Services système</span>
+                        <span class="tag">Serveurs</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3><span>04.</span> Développement logiciel</h3>
                     <div class="tags">
                         <span class="tag">Java</span>
                         <span class="tag">C++</span>
@@ -897,26 +924,16 @@
                 </article>
 
                 <article class="skill-card">
-                    <h3><span>03.</span> Systèmes & outils</h3>
+                    <h3><span>05.</span> Développement mobile</h3>
                     <div class="tags">
-                        <span class="tag">Linux</span>
-                        <span class="tag">Git</span>
-                        <span class="tag">GitHub</span>
                         <span class="tag">Android</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">Applications mobiles</span>
                     </div>
                 </article>
 
                 <article class="skill-card">
-                    <h3><span>04.</span> Sciences & simulation</h3>
-                    <div class="tags">
-                        <span class="tag">MATLAB</span>
-                        <span class="tag">Simulation</span>
-                        <span class="tag">Traitement du signal</span>
-                    </div>
-                </article>
-
-                <article class="skill-card">
-                    <h3><span>05.</span> Intelligence artificielle</h3>
+                    <h3><span>06.</span> Intelligence artificielle</h3>
                     <div class="tags">
                         <span class="tag">Machine Learning</span>
                         <span class="tag">Modèles</span>
@@ -925,14 +942,25 @@
                 </article>
 
                 <article class="skill-card">
-                    <h3><span>06.</span> Méthodes de travail</h3>
+                    <h3><span>07.</span> Simulation et traitement du signal</h3>
                     <div class="tags">
+                        <span class="tag">MATLAB</span>
+                        <span class="tag">Simulation</span>
+                        <span class="tag">Traitement du signal</span>
+                    </div>
+                </article>
+
+                <article class="skill-card">
+                    <h3><span>08.</span> Outils et méthodes</h3>
+                    <div class="tags">
+                        <span class="tag">Git</span>
                         <span class="tag">Travail en équipe</span>
-                        <span class="tag">Résolution de problèmes</span>
                         <span class="tag">Autonomie</span>
+                        <span class="tag">Résolution de problèmes</span>
                         <span class="tag">Adaptabilité</span>
                     </div>
                 </article>
+
             </div>
         </div>
     </section>
@@ -953,20 +981,22 @@
                         <span class="project-icon">⌘</span>
                         <span class="project-type">C++ / Algorithmique</span>
                     </div>
+
                     <h3>Maze Solver</h3>
+
                     <p>
                         Projet réalisé dans le cadre de ma mobilité Erasmus à
                         VSB-TUO, en République tchèque. Développement d'un programme
                         en C++ autour de la résolution de labyrinthes.
                     </p>
+
                     <div class="tags">
                         <span class="tag">C++</span>
                         <span class="tag">Algorithmique</span>
                         <span class="tag">Erasmus</span>
                     </div>
-                    <a class="project-link" href="https://github.com/GillesFokou/MazeSolver" target="_blank" rel="noopener noreferrer">
-                        Voir le code sur GitHub ↗
-                    </a>
+
+                    <span class="project-link">Projet académique</span>
                 </article>
 
                 <article class="project-card">
@@ -974,17 +1004,21 @@
                         <span class="project-icon">⌁</span>
                         <span class="project-type">MATLAB / Réseaux</span>
                     </div>
+
                     <h3>Analyse de sécurité radioélectrique</h3>
+
                     <p>
                         Travail autour de l'analyse de phénomènes de brouillage
                         radioélectrique (jamming), avec une approche basée sur
                         la simulation et l'étude des signaux.
                     </p>
+
                     <div class="tags">
                         <span class="tag">MATLAB</span>
                         <span class="tag">Jamming</span>
                         <span class="tag">Signal</span>
                     </div>
+
                     <span class="project-link">Projet académique</span>
                 </article>
 
@@ -993,18 +1027,22 @@
                         <span class="project-icon">♫</span>
                         <span class="project-type">Application / Développement</span>
                     </div>
+
                     <h3>Application Music</h3>
+
                     <p>
                         Projet de développement d'une application autour de la
-                        musique. Le code source est disponible sur mon dépôt GitHub.
+                        musique, dans le cadre de mon apprentissage du développement
+                        logiciel et de la conception d'applications.
                     </p>
+
                     <div class="tags">
                         <span class="tag">Développement</span>
                         <span class="tag">Application</span>
+                        <span class="tag">Programmation</span>
                     </div>
-                    <a class="project-link" href="https://github.com/GillesFokou/ApplicationMusic" target="_blank" rel="noopener noreferrer">
-                        Voir le code sur GitHub ↗
-                    </a>
+
+                    <span class="project-link">Projet personnel</span>
                 </article>
 
                 <article class="project-card">
@@ -1012,19 +1050,20 @@
                         <span class="project-icon">↻</span>
                         <span class="project-type">Développement logiciel</span>
                     </div>
+
                     <h3>Cycle de vie</h3>
+
                     <p>
-                        Projet de développement disponible sur GitHub, réalisé
-                        dans le cadre de mon apprentissage des outils et méthodes
-                        de programmation.
+                        Projet de développement réalisé dans le cadre de mon
+                        apprentissage des outils et méthodes de programmation.
                     </p>
+
                     <div class="tags">
                         <span class="tag">Programmation</span>
-                        <span class="tag">Git</span>
+                        <span class="tag">Développement logiciel</span>
                     </div>
-                    <a class="project-link" href="https://github.com/GillesFokou/Cycle-de-vie" target="_blank" rel="noopener noreferrer">
-                        Voir le code sur GitHub ↗
-                    </a>
+
+                    <span class="project-link">Projet académique</span>
                 </article>
 
             </div>
@@ -1055,7 +1094,9 @@
                 <article class="timeline-item">
                     <div class="timeline-date">MOBILITÉ INTERNATIONALE</div>
                     <h3>Mobilité Erasmus</h3>
-                    <div class="timeline-place">VSB — Technical University of Ostrava · République tchèque</div>
+                    <div class="timeline-place">
+                        VSB — Technical University of Ostrava · République tchèque
+                    </div>
                     <p>
                         Expérience universitaire à l'étranger, découverte d'un
                         nouvel environnement académique et réalisation de projets
@@ -1103,6 +1144,7 @@
                     <p>ESAIP · Angers, France</p>
                     <p>Orientation : Cybersécurité & Systèmes</p>
                 </div>
+
                 <span class="education-date">En cours</span>
             </div>
         </div>
@@ -1118,12 +1160,16 @@
             </div>
 
             <div class="certifications">
+
                 <div class="certification">
                     <div>
                         <strong>MATLAB</strong><br>
                         <span>Certificat de formation</span>
                     </div>
-                    <a href="certificate MATLAB.pdf" target="_blank" rel="noopener noreferrer">Consulter ↗</a>
+                    <a href="certificate MATLAB.pdf"
+                       target="_blank" rel="noopener noreferrer">
+                        Consulter ↗
+                    </a>
                 </div>
 
                 <div class="certification">
@@ -1131,7 +1177,10 @@
                         <strong>Machine Learning</strong><br>
                         <span>Certificat de formation</span>
                     </div>
-                    <a href="certificate Machine Learning.pdf" target="_blank" rel="noopener noreferrer">Consulter ↗</a>
+                    <a href="certificate Machine Learning.pdf"
+                       target="_blank" rel="noopener noreferrer">
+                        Consulter ↗
+                    </a>
                 </div>
 
                 <div class="certification">
@@ -1139,7 +1188,10 @@
                         <strong>Secourisme</strong><br>
                         <span>Attestation de secouriste</span>
                     </div>
-                    <a href="Attestation_de_secouriste.pdf" target="_blank" rel="noopener noreferrer">Consulter ↗</a>
+                    <a href="Attestation_de_secouriste.pdf"
+                       target="_blank" rel="noopener noreferrer">
+                        Consulter ↗
+                    </a>
                 </div>
 
                 <div class="certification">
@@ -1147,8 +1199,12 @@
                         <strong>Curriculum Vitae</strong><br>
                         <span>Parcours et expériences</span>
                     </div>
-                    <a href="CV PRO GILLES.pdf" target="_blank" rel="noopener noreferrer">Consulter ↗</a>
+                    <a href="CV PRO GILLES.pdf"
+                       target="_blank" rel="noopener noreferrer">
+                        Consulter ↗
+                    </a>
                 </div>
+
             </div>
         </div>
     </section>
@@ -1163,6 +1219,7 @@
             </div>
 
             <div class="personal-grid">
+
                 <article class="personal-card">
                     <h3>Associations ESAIP</h3>
                     <p>
@@ -1178,6 +1235,7 @@
                         et d'encadrement, dans un contexte collectif.
                     </p>
                 </article>
+
             </div>
         </div>
     </section>
@@ -1205,6 +1263,7 @@ Tapez "help" pour afficher les commandes disponibles.</div>
 
                     <form class="terminal-form" id="terminalForm">
                         <span class="terminal-prompt">gilles@portfolio:~$</span>
+
                         <input
                             class="terminal-input"
                             id="terminalInput"
@@ -1217,7 +1276,7 @@ Tapez "help" pour afficher les commandes disponibles.</div>
                     </form>
 
                     <p class="terminal-hint">
-                        Commandes disponibles : help, about, skills, projects, github, cv, clear
+                        Commandes disponibles : help, about, skills, projects, cv, clear
                     </p>
                 </div>
             </div>
@@ -1226,22 +1285,22 @@ Tapez "help" pour afficher les commandes disponibles.</div>
 
 </main>
 
+<!-- FOOTER -->
 <footer>
     <div class="container footer-content">
         <p>© 2026 Gilles Adrien FOKOU TOUO — Portfolio personnel.</p>
-        <a href="https://github.com/GillesFokou" target="_blank" rel="noopener noreferrer">
-            github.com/GillesFokou ↗
-        </a>
+        <span class="muted">Conçu avec HTML, CSS et JavaScript.</span>
     </div>
 </footer>
 
 <script>
-    // Menu mobile
+    // MENU MOBILE
     const menuToggle = document.getElementById("menuToggle");
     const navLinks = document.getElementById("navLinks");
 
     menuToggle.addEventListener("click", () => {
         const isOpen = navLinks.classList.toggle("open");
+
         menuToggle.setAttribute("aria-expanded", String(isOpen));
         menuToggle.textContent = isOpen ? "✕" : "☰";
     });
@@ -1254,46 +1313,52 @@ Tapez "help" pour afficher les commandes disponibles.</div>
         });
     });
 
-    // Terminal interactif
+    // TERMINAL INTERACTIF
     const terminalForm = document.getElementById("terminalForm");
     const terminalInput = document.getElementById("terminalInput");
     const terminalOutput = document.getElementById("terminalOutput");
 
     const commands = {
+
         help: `Commandes disponibles :
 
   about     Présentation personnelle
   skills    Compétences techniques
   projects  Liste des projets
-  github    Accès au profil GitHub
   cv        Consulter mon CV
   clear     Effacer le terminal`,
 
         about: `Gilles Adrien FOKOU TOUO
+
 Étudiant ingénieur à l'ESAIP Angers.
-Domaines d'intérêt : informatique, réseaux,
-cybersécurité et développement logiciel.`,
 
-        skills: `Compétences abordées :
+Domaines d'intérêt :
+- Informatique
+- Réseaux
+- Cybersécurité
+- Administration systèmes
+- Développement logiciel`,
 
-  Langages       Java, C++, JavaScript
-  Réseaux        PPSM, protocoles, services
-  Systèmes       Linux
-  Simulation     MATLAB
-  IA             Machine Learning
-  Outils         Git, GitHub`,
+        skills: `COMPÉTENCES TECHNIQUES
 
-        projects: `Projets disponibles :
+  Cybersécurité : PPSM, sécurité réseau
+  Réseaux        : TCP/IP, DNS, DHCP, routage
+  Systèmes       : Linux, administration
+  Développement  : Java, C++, JavaScript
+  Mobile         : Android
+  Simulation     : MATLAB, traitement du signal
+  IA             : Machine Learning
+  Outils         : Git`,
+
+        projects: `PROJETS TECHNIQUES
 
   1. Maze Solver — C++
   2. Analyse radioélectrique — MATLAB
   3. Application Music
   4. Cycle de vie
 
-Utilisez mon profil GitHub pour accéder aux dépôts.`,
-
-        github: `Ouverture du profil GitHub...
-https://github.com/GillesFokou`,
+Les descriptions des projets sont disponibles
+dans la section Projets du portfolio.`,
 
         cv: `Ouverture du CV...
 Fichier : CV PRO GILLES.pdf`
@@ -1316,14 +1381,6 @@ Tapez "help" pour afficher les commandes disponibles.`;
         terminalOutput.textContent +=
             `\n\n$ ${command}\n${response}`;
 
-        if (normalized === "github") {
-            window.open(
-                "https://github.com/GillesFokou",
-                "_blank",
-                "noopener,noreferrer"
-            );
-        }
-
         if (normalized === "cv") {
             window.open(
                 "CV PRO GILLES.pdf",
@@ -1339,7 +1396,9 @@ Tapez "help" pour afficher les commandes disponibles.`;
         event.preventDefault();
 
         const command = terminalInput.value;
+
         printCommand(command);
+
         terminalInput.value = "";
     });
 </script>
