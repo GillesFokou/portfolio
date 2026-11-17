@@ -98,7 +98,6 @@ button {
     cursor: pointer;
 }
 
-/* Accueil et photo de fond */
 
 .hero {
     min-height: 690px;
@@ -231,8 +230,6 @@ button {
     z-index: 2;
 }
 
-/* Sections */
-
 section:not(.hero) {
     padding: 85px 0;
     border-bottom: 1px solid var(--border);
@@ -266,7 +263,6 @@ section:not(.hero) {
     margin-top: 10px;
 }
 
-/* À propos */
 
 .about-grid {
     display: grid;
@@ -330,7 +326,6 @@ section:not(.hero) {
     font-weight: 600;
 }
 
-/* Compétences */
 
 .skills-grid {
     display: grid;
@@ -382,7 +377,6 @@ section:not(.hero) {
     font-size: 11px;
 }
 
-/* Projets */
 
 .projects-grid {
     display: grid;
@@ -445,7 +439,6 @@ section:not(.hero) {
     font-size: 12px;
 }
 
-/* Parcours */
 
 .timeline {
     border-left: 1px solid #40534f;
@@ -533,8 +526,6 @@ section:not(.hero) {
     font-size: 12px;
 }
 
-/* Certifications */
-
 .certifications {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -583,7 +574,6 @@ section:not(.hero) {
     color: var(--green);
 }
 
-/* Engagements */
 
 .personal-grid {
     display: grid;
