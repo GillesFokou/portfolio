@@ -1,21 +1,14 @@
-"use strict";
-
-const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
-
-if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
-        const isOpen = navLinks.classList.toggle("open");
-
-        menuToggle.setAttribute("aria-expanded", String(isOpen));
-        menuToggle.textContent = isOpen ? "✕" : "☰";
-    });
-
-    navLinks.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("open");
-            menuToggle.setAttribute("aria-expanded", "false");
-            menuToggle.textContent = "☰";
-        });
-    });
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: url("fond_1.avif") center / 420px repeat;
+    filter: invert(1);
+    opacity: .05;
+    pointer-events: none;
 }
+
+section:not(.hero) { background: transparent; }
+
+.section-soft { background: rgba(19, 30, 39, .82); }
